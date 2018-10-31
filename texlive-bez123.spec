@@ -6,7 +6,7 @@
 # catalog-version 1.1b
 Name:		texlive-bez123
 Version:	1.1b
-Release:	10
+Release:	11
 Summary:	Support for Bezier curves
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bez123
