@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/bez123
-# catalog-date 2009-09-02 11:33:10 +0200
-# catalog-license lppl1.3
-# catalog-version 1.1b
 Name:		texlive-bez123
-Version:	1.1b
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Support for Bezier curves
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bez123
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.doc.r15878.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.source.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ Provides a package multiply that provides a command for
 multiplication of a length without numerical overflow.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,25 +40,11 @@ multiplication of a length without numerical overflow.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1b-2
-+ Revision: 749582
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1b-1
-+ Revision: 717911
-- texlive-bez123
-- texlive-bez123
-- texlive-bez123
-- texlive-bez123
-- texlive-bez123
-
