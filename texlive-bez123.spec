@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Support for Bezier curves
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bez123
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bez123
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bez123.doc.r%{version}.tar.xz
